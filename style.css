@@ -1,0 +1,311 @@
+/* =================================
+   1. CONFIGURAÇÕES GERAIS
+================================= */
+
+:root {
+    --azul-marinho: #15152f;
+    --azul-secundario: #242447;
+    --preto: #17171c;
+    --violeta: #7654c8;
+    --violeta-claro: #eee8fc;
+    --fundo: #f2f1f7;
+    --branco: #ffffff;
+    --texto: #414151;
+    --borda: #e4e1ed;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.7;
+    padding: 35px 24px;
+}
+
+/* =================================
+   2. CABEÇALHO
+================================= */
+
+.cabecalho {
+    max-width: 1500px;
+    margin: 0 auto 30px;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+.identificador {
+    color: var(--violeta);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.cabecalho h1 {
+    color: var(--azul-marinho);
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.subtitulo {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: var(--texto);
+}
+
+/* =================================
+   3. LAYOUT DE TRÊS COLUNAS
+================================= */
+
+.curriculo {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 0.9fr)
+        minmax(0, 1.25fr)
+        minmax(0, 0.9fr);
+    gap: 22px;
+    max-width: 1500px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.coluna {
+    min-width: 0;
+    background: var(--branco);
+    padding: 28px 23px;
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(21, 21, 47, 0.06);
+}
+
+/* =================================
+   4. PERFIL E FOTO
+================================= */
+
+.perfil {
+    text-align: center;
+    background: var(--azul-marinho);
+    color: var(--branco);
+    border-top: 5px solid var(--violeta);
+}
+
+.foto {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.foto img {
+    width: 145px;
+    height: 145px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--violeta);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+.perfil > h2 {
+    color: var(--branco);
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.descricao {
+    font-size: 14px;
+    color: #e2e0f0;
+    margin-bottom: 25px;
+}
+
+.perfil .secao {
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    padding-top: 22px;
+}
+
+.perfil .secao h2 {
+    color: #d4c5ff;
+    border-bottom-color: rgba(255, 255, 255, 0.22);
+}
+
+/* =================================
+   5. TÍTULOS E SEÇÕES
+================================= */
+
+.secao {
+    margin-bottom: 30px;
+}
+
+.secao:last-child {
+    margin-bottom: 0;
+}
+
+.secao h2 {
+    color: var(--azul-marinho);
+    font-size: 19px;
+    line-height: 1.4;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--violeta);
+    text-align: center;
+}
+
+.secao h2 span {
+    color: var(--violeta);
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+/* =================================
+   6. FORMAÇÃO E EXPERIÊNCIAS
+================================= */
+
+.registro {
+    padding: 0 0 17px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid var(--borda);
+}
+
+.registro:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.registro h3 {
+    color: var(--azul-secundario);
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 7px;
+}
+
+.registro p {
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+/* =================================
+   7. CONTATO
+================================= */
+
+.contato-item {
+    margin-bottom: 20px;
+}
+
+.contato-item:last-child {
+    margin-bottom: 0;
+}
+
+.rotulo {
+    display: block;
+    color: #c6b4ff;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.contato-item p {
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+/* =================================
+   8. LISTAS E CONHECIMENTOS
+================================= */
+
+.lista {
+    list-style: none;
+}
+
+.lista li {
+    background: var(--violeta-claro);
+    color: var(--azul-marinho);
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    border-left: 3px solid var(--violeta);
+    border-radius: 5px;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.lista li:last-child {
+    margin-bottom: 0;
+}
+
+/* =================================
+   9. RODAPÉ
+================================= */
+
+.rodape {
+    max-width: 1500px;
+    margin: 25px auto 0;
+    text-align: center;
+    color: #777486;
+    font-size: 12px;
+}
+
+/* =================================
+   10. TABLETS
+================================= */
+
+@media (max-width: 1050px) {
+    .curriculo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .perfil {
+        grid-row: span 2;
+    }
+}
+
+/* =================================
+   11. CELULARES
+================================= */
+
+@media (max-width: 680px) {
+    body {
+        padding: 12px;
+    }
+
+    .cabecalho {
+        padding: 20px 10px;
+        margin-bottom: 15px;
+    }
+
+    .identificador {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .subtitulo {
+        font-size: 14px;
+    }
+
+    .curriculo {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .perfil {
+        grid-row: auto;
+    }
+
+    .coluna {
+        padding: 24px 20px;
+        border-radius: 12px;
+    }
+
+    .foto img {
+        width: 130px;
+        height: 130px;
+    }
+}
